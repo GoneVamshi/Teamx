@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard | WorkForce</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/employee.css">
+  <link rel="stylesheet" href="../../css/modal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="../../js/utils.js" defer></script>
+  <script src="../../js/employee.js" defer></script>
+</head>
+<body>
+  <div class="employee-layout">
+    <!-- Sidebar -->
+    <div class="employee-sidebar">
+      <div class="employee-sidebar-header">
+        <h1>WorkForce</h1>
+      </div>
+      <div class="employee-sidebar-menu">
+        <a href="dashboard.html" class="employee-menu-item active">
+          <i class="fas fa-tachometer-alt"></i>
+          Dashboard
+        </a>
+        <a href="profile.html" class="employee-menu-item">
+          <i class="fas fa-user"></i>
+          My Profile
+        </a>
+      </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="employee-main-content">
+      <div class="employee-topbar">
+        <div class="employee-topbar-title">
+          <button id="employee-mobile-toggle" class="employee-mobile-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="user-profile">
+          <div class="profile-toggle" id="employee-profile-toggle">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Employee" id="employee-image">
+            <span id="employee-name">John Doe</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="profile-dropdown" id="employee-profile-dropdown">
+            <a href="profile.html" class="dropdown-item">
+              <i class="fas fa-user"></i> My Profile
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item" id="logout-btn">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <div class="stat-value" id="pending-tasks">0</div>
+          <div class="stat-label">Pending Tasks</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="stat-value" id="in-progress-tasks">0</div>
+          <div class="stat-label">In Progress</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="stat-value" id="completed-tasks">0</div>
+          <div class="stat-label">Completed</div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Today's Attendance</h2>
+          <div class="attendance-actions">
+            <button class="btn btn-primary" id="check-in-btn">Check In</button>
+            <button class="btn btn-secondary" id="check-out-btn">Check Out</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <p id="attendance-status">Status: Not checked in yet</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">My Tasks</h2>
+        </div>
+        <div class="card-body">
+          <div id="tasks-list">
+            <!-- Tasks will be loaded here -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Announcements</h2>
+        </div>
+        <div class="card-body">
+          <div id="announcements-list">
+            <!-- Announcements will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

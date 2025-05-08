@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | WorkForce</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+  <link rel="stylesheet" href="../../css/modal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="../../js/utils.js" defer></script>
+  <script src="../../js/admin.js" defer></script>
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>WorkForce</h1>
+      </div>
+      <div class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item active">
+          <i class="fas fa-tachometer-alt"></i>
+          Dashboard
+        </a>
+        <a href="employees.html" class="menu-item">
+          <i class="fas fa-users"></i>
+          Employees
+        </a>
+        <a href="leaves.html" class="menu-item">
+          <i class="fas fa-calendar-alt"></i>
+          Leave Management
+        </a>
+        <a href="tasks.html" class="menu-item">
+          <i class="fas fa-tasks"></i>
+          Task Management
+        </a>
+        <a href="announcements.html" class="menu-item">
+          <i class="fas fa-bullhorn"></i>
+          Announcements
+        </a>
+      </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="topbar">
+        <div class="topbar-title">
+          <button id="mobile-toggle" class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="user-profile">
+          <div class="profile-toggle" id="profile-toggle">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Admin" id="admin-image">
+            <span id="admin-name">Admin User</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="profile-dropdown" id="profile-dropdown">
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-user"></i> Profile
+            </a>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item" id="logout-btn">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-value" id="total-employees">0</div>
+          <div class="stat-label">Total Employees</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <div class="stat-value" id="present-today">0</div>
+          <div class="stat-label">Present Today</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="stat-value" id="pending-leaves">0</div>
+          <div class="stat-label">Pending Leave Requests</div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Recent Activities</h2>
+        </div>
+        <div class="card-body">
+          <p>Welcome to the admin dashboard. From here, you can manage employees, handle leave requests, assign tasks, and make announcements.</p>
+          <p>Use the sidebar navigation to access different sections of the admin panel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
